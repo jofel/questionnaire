@@ -21,3 +21,47 @@ input[type="text"]:focus, textarea {
 	background-color : yellow;
 	border-color: white;
 }
+
+.hr-3 {
+     color: black;
+     background: black; 
+     height: 3px;
+}
+
+.hr-1 {
+     background: black; 
+     height: 1px;
+}
+
+
+
+h3 {
+	text-decoration: underline;
+	margin-top: 0.0em;	
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+    height: 20px;
+}
+
+th.answer {
+	width: 37px;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
