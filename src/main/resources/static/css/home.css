@@ -13,6 +13,11 @@ body {
 /* } */
 
 div {
-	background-color: rgba(176, 190, 200, 0.5);
+/* 	background-color: rgba(176, 190, 200, 0.5); */
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
+input[type="text"]:focus, textarea {
+	background-color : yellow;
+	border-color: white;
+}

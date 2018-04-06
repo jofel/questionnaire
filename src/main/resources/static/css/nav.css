@@ -3,7 +3,7 @@
     left: -120px;
     transition: 0.3s;
     padding: 15px;
-    width:  150px;
+    width:  170px;
     text-decoration: none;
     font-size: 20px;
     color: white;
@@ -14,17 +14,17 @@
     left: 0;
 }
 
-#about {
+#home {
     top: 120px;
     background-color: #4CAF50;
 }
 
-#blog {
+#question {
     top: 180px;
     background-color: #f44336;
 }
 
-#projects {
+#print {
     top: 240px;
     background-color: #2196F3;
 }
@@ -32,4 +32,8 @@
 #contact {
     top: 300px;
     background-color: #555
+}
+
+.navicon {
+	float: right;
 }

@@ -1,21 +1,26 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Spring Boot Thymeleaf Hello World Example</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-<link rel="stylesheet" href="/bootstrap-3.3.7/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/css/nav.css" />
-<link rel="stylesheet" href="/css/home.css" />
-<script src="https://unpkg.com/vue"></script>
+	<title>Spring Boot Thymeleaf Hello World Example</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<link rel="stylesheet" href="/bootstrap-3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/nav.css" />
+	<link rel="stylesheet" href="/css/home.css" />
+	<script src="https://unpkg.com/vue"></script>
+	<script 
+		defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 
+		integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" 
+		crossorigin="anonymous">
+	</script>
 </head>
 <body>
 
 	<div id="mySidenav" class="sidenav">
-	  <a href="#" id="about">Kezdőlap</a>
-	  <a href="#" id="blog">Kérdőív</a>
-	  <a href="#" id="projects">Nyomtatás</a>
-	  <a href="#" id="contact">Kapcsolat</a>
+	  <a href="#" id="home">Kezdőlap <i class="fas fa-home navicon"></i></a>
+	  <a href="#" id="question">Kérdőív <i class="fas fa-file navicon"></i></a>
+	  <a href="#" id="print">Nyomtatás <i class="fas fa-print navicon"></i></a>
+	  <a href="#" id="contact">Kapcsolat <i class="fas fa-envelope navicon"></i></a>
 	</div>
 
 	<div id="vue-app" class="container">
