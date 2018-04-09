@@ -17,23 +17,28 @@
 </head>
 <body>
 	<div id="mySidenav" class="sidenav no-print">
-		<a href="#" id="home">Kezdőlap <i class="fas fa-home navicon"></i>
-		</a> <a href="#" id="question">Kérdőív <i class="fas fa-file navicon"></i>
-		</a> <a href="javascript:window.print()" id="print">Nyomtatás <i
+		<a href="#home" id="navIcon_home">Kezdőlap <i
+			class="fas fa-home navicon"></i>
+		</a> <a href="#questionnaire" id="navIcon_questionnaire">Kérdőív <i
+			class="fas fa-file navicon"></i>
+		</a> <a href="javascript:window.print()" id="navIcon_print">Nyomtatás <i
 			class="fas fa-print navicon"></i>
 		</a> <a
 			href="mailto:fodor.jofel@gmail.com?Subject=HermanHallgatoiFelmeres"
-			id="contact">Kapcsolat <i class="fas fa-envelope navicon"></i>
+			id="navIcon_contact">Kapcsolat <i class="fas fa-envelope navicon"></i>
 		</a>
 	</div>
 
-	<div class="container">
+	<div id="home" class="container no-print">
+		<h1>Leírás</h1>
+		<p>Ezen alkalmazás célja, hogy a Herman Ottó Kollégiumban végzett
+			hallgatói felméréshez a kiosztott adatlapokat elkészítsük.</p>
+	</div>
+
+	<div id="questionnaire" class="container">
 		<h1>Hallgatói elégedettség felmérés - 2018</h1>
 		<h4>SZTE Herman Ottó Kollégium</h4>
 		<hr class="hr-3" />
-	</div>
-
-	<div class="container">
 		<h3>I. Felmérés célja</h3>
 		<p>
 			Kedves Kollégisták! <br> <br> Reméljük ezen kérdőív
@@ -43,43 +48,40 @@
 			kiértékelhetőek legyenek.<br> Köszönjük együttműködéseteket!
 		</p>
 		<hr class="hr-1" />
-	</div>
-
-	<div id="vue-app" class="container">
-		<h3>II. Felmérés</h3>
-		<p>
-			Jelöld be, hogy mennyire tartod igaznak az állításokat.<br>
+		<div id="vue-app">
+			<h3>II. Felmérés</h3>
+			<p>
+				Jelöld be, hogy mennyire tartod igaznak az állításokat.<br>
 			<ol>
-				<li> - Általában nem igaz</li>
-				<li> - Inkább nem igaz</li>
-				<li> - Néha igaz, néha nem</li>
-				<li> - Inkább igaz</li>
-				<li> - Általában igaz</li>
+				<li>- Általában nem igaz</li>
+				<li>- Inkább nem igaz</li>
+				<li>- Néha igaz, néha nem</li>
+				<li>- Inkább igaz</li>
+				<li>- Általában igaz</li>
 			</ol>
-		</p>
+			</p>
 
-		<table>
-			<tr>
-				<th>Kérdés</th>
-				<th class="answer">1</th>
-				<th class="answer">2</th>
-				<th class="answer">3</th>
-				<th class="answer">4</th>
-				<th class="answer">5</th>
-			</tr>
-			<tr v-for="q in questions">
-				<td>{{ q.question }}</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-		<hr class="hr-1" />
-	</div>
+			<table>
+				<tr>
+					<th>Kérdés</th>
+					<th class="answer">1</th>
+					<th class="answer">2</th>
+					<th class="answer">3</th>
+					<th class="answer">4</th>
+					<th class="answer">5</th>
+				</tr>
+				<tr v-for="q in questions">
+					<td>{{ q.question }}</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<hr class="hr-1" />
+		</div>
 
-	<div class="container">
 		<h3>III. Köszönetnyilvánítás</h3>
 		<p>
 			Köszönjük válaszaitokat! <br> A felmérés feldolgozásához

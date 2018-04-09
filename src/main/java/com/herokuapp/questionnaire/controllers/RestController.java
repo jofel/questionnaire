@@ -29,6 +29,11 @@ public class RestController {
 		return "home";
 	}
 	
+	@RequestMapping("/contact")
+	public String contact(Map<String, Object> model) {
+		return "contact";
+	}
+	
 	@GetMapping(value="/questions")
 	public List<Question> questions(){
 		return questionService.getAllQuestions();

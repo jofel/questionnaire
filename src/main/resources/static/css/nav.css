@@ -20,22 +20,22 @@
     left: 0;
 }
 
-#home {
+#navIcon_home {
     top: 120px;
     background-color: #4CAF50;
 }
 
-#question {
+#navIcon_questionnaire {
     top: 180px;
     background-color: #f44336;
 }
 
-#print {
+#navIcon_print {
     top: 240px;
     background-color: #2196F3;
 }
 
-#contact {
+#navIcon_contact {
     top: 300px;
     background-color: #555
 }
