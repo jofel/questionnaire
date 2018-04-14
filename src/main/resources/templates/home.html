@@ -29,7 +29,7 @@
 		</a>
 	</div>
 
-	<div id="home" class="container no-print">
+	<div id="home" class="container no-print hidden-print">
 		<h1>Leírás</h1>
 		<p>Ezen alkalmazás célja, hogy a Herman Ottó Kollégiumban végzett
 			hallgatói felméréshez a kiosztott adatlapokat elkészítsük.</p>
@@ -72,11 +72,11 @@
 				</tr>
 				<tr th:each="question : ${questions}">
 					<td th:text="${question.question}">1</td>
-					<td class="answer"></td>
-					<td class="answer"></td>
-					<td class="answer"></td>
-					<td class="answer"></td>
-					<td class="answer"></td>
+					<td class="answer"><div class="answerDiv"></div></td>
+					<td class="answer"><div class="answerDiv"></td>
+					<td class="answer"><div class="answerDiv"></td>
+					<td class="answer"><div class="answerDiv"></td>
+					<td class="answer"><div class="answerDiv"></td>
 <!-- 					<td th:text="${question.topic}">Test</td> -->
 <!-- 					<td th:text="${question.title}">1</td> -->
 <!-- 					<td th:text="${question.question}">Test</td> -->

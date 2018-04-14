@@ -1,3 +1,12 @@
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
+
 body {
 	background: url('/pic/paper-2.jpg') no-repeat center fixed; 
     background-size: cover;
@@ -44,28 +53,34 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    border: 1px solid #ddd;
+/*     border: 1px solid #ddd; */
+}
+
+.answerDiv {
+	border: 2px solid black;
+	height: 100%;
+	width: 100%;
 }
 
 th, td {
     text-align: left;
-    padding: 8px;
-    border: 0px 0px 1px 0px solid #ddd;
+    padding: 5px;
+/*     border: 0px 0px 1px 0px solid #ddd; */
     height: 20px;
 }
 
 th.answer {
-	width: 37px;
+	width: 30px;
 	text-align: center;
 }
 
-td.answer {
-	background-image: url(/pic/square-2.jpg);
-	background-repeat: no-repeat;
-/* 	background-attachment: fixed; */
-    background-position: center; 
-	background-size: contain;
-}
+/* td.answer { */
+/* 	background-image: url(/pic/square-2.jpg); */
+/* 	background-repeat: no-repeat; */
+/* /* 	background-attachment: fixed; */ */
+/*     background-position: center;  */
+/* 	background-size: contain; */
+/* } */
 
 @media print
 {    
