@@ -89,3 +89,30 @@ th.answer {
         display: none !important;
     }
 }
+
+.fa-minus-square {
+	color: red;
+}
+
+.fa-plus-square {
+	color: green;
+}
+
+.functionColumn {
+	width: 80px;
+}
+
+#home{
+/* 	background-color: rgba(76, 175, 80, 0.1); */
+	margin-bottom: 200px;
+}
+
+#questionnaire{
+/* 	background-color: rgba(244, 67, 54, 0.1); */
+}
+
+#banner{
+	text-align: center;
+}
+
+

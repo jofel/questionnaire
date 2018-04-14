@@ -21,18 +21,22 @@
 			class="fas fa-home navicon"></i>
 		</a> <a href="#questionnaire" id="navIcon_questionnaire">Kérdőív <i
 			class="fas fa-file navicon"></i>
-		</a> <a href="javascript:window.print()" id="navIcon_print">Nyomtatás <i
-			class="fas fa-print navicon"></i>
+		</a> <a href="javascript:window.print()" id="navIcon_print">Nyomtatás
+			<i class="fas fa-print navicon"></i>
 		</a> <a
 			href="mailto:fodor.jofel@gmail.com?Subject=HermanHallgatoiFelmeres"
 			id="navIcon_contact">Kapcsolat <i class="fas fa-envelope navicon"></i>
 		</a>
 	</div>
 
-	<div id="home" class="container no-print hidden-print">
+	<div id="home" class="container no-print">
+	<div id="banner"><img src="/pic/hermanLogo.png" alt="Mountain View"></div>
 		<h1>Leírás</h1>
 		<p>Ezen alkalmazás célja, hogy a Herman Ottó Kollégiumban végzett
 			hallgatói felméréshez a kiosztott adatlapokat elkészítsük.</p>
+			<h4>Készítette:</h4>
+		<p>Fodor József Felicián</p>
+		<p>SZTE Herman Ottó Kollégium Adminisztrációért felelős senior</p>
 	</div>
 
 	<div id="questionnaire" class="container">
@@ -52,6 +56,7 @@
 			<h3>II. Felmérés</h3>
 			<p>
 				Jelöld be, hogy mennyire tartod igaznak az állításokat.<br>
+			</p>
 			<ol>
 				<li>- Általában nem igaz</li>
 				<li>- Inkább nem igaz</li>
@@ -59,10 +64,10 @@
 				<li>- Inkább igaz</li>
 				<li>- Általában igaz</li>
 			</ol>
-			</p>
 
 			<table>
 				<tr>
+					<th class="functionColumn no-print"></th>
 					<th>Kérdés</th>
 					<th class="answer">1</th>
 					<th class="answer">2</th>
@@ -71,16 +76,25 @@
 					<th class="answer">5</th>
 				</tr>
 				<tr th:each="question : ${questions}">
+					<td class="no-print">
+						<div class="btn-group" role="group">
+							<i class="fas fa-plus-square fa-lg"><button></button></i> <i
+								class="fas fa-pen-square fa-lg"><button></button></i>
+							</button>
+							<i class="fas fa-minus-square fa-lg"><button></button></i>
+						</div>
+
+					</td>
 					<td th:text="${question.question}">1</td>
 					<td class="answer"><div class="answerDiv"></div></td>
 					<td class="answer"><div class="answerDiv"></td>
 					<td class="answer"><div class="answerDiv"></td>
 					<td class="answer"><div class="answerDiv"></td>
 					<td class="answer"><div class="answerDiv"></td>
-<!-- 					<td th:text="${question.topic}">Test</td> -->
-<!-- 					<td th:text="${question.title}">1</td> -->
-<!-- 					<td th:text="${question.question}">Test</td> -->
-<!-- 					<td th:text="${question.answer}">Test</td> -->
+					<!-- 					<td th:text="${question.topic}">Test</td> -->
+					<!-- 					<td th:text="${question.title}">1</td> -->
+					<!-- 					<td th:text="${question.question}">Test</td> -->
+					<!-- 					<td th:text="${question.answer}">Test</td> -->
 				</tr>
 			</table>
 			<hr class="hr-1" />
