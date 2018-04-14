@@ -50,12 +50,21 @@ table {
 th, td {
     text-align: left;
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 0px 0px 1px 0px solid #ddd;
     height: 20px;
 }
 
 th.answer {
 	width: 37px;
+	text-align: center;
+}
+
+td.answer {
+	background-image: url(/pic/square-2.jpg);
+	background-repeat: no-repeat;
+/* 	background-attachment: fixed; */
+    background-position: center; 
+	background-size: contain;
 }
 
 @media print
