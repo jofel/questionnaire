@@ -1,11 +1,11 @@
 
-import Vue from 'vue'
-import App from './App.vue'
-
-new Vue({
-	el: '#app',
-	render: h => h(App)
-})
+//import Vue from 'vue'
+//import App from './App.vue'
+//
+//new Vue({
+//	el: '#app',
+//	render: h => h(App)
+//})
 
 
 // new Vue(
@@ -13,7 +13,7 @@ new Vue({
 // 			el : '#vue-app',
 // 			data : {
 // 				topics : [ 'Általános', 'Kultura', 'Sport', 'Higénia' ],
-// 				questions : [
+// 				questions : [],
 // 						{
 // 							topic : 'Általános',
 // 							title : 'Általános 01',
@@ -37,12 +37,20 @@ new Vue({
 // 							title : 'Higénia 01',
 // 							question : 'Mit gondol általában a .................. ................... .......... ............... ............ ...........................-ról?',
 // 							answer : '0'
-// 						} ],
+// 						}
+// 						],
 // 				name : 'Jofel',
 // 			},
 // 			methods : {
 // 				great : function(time) {
 // 					return 'Jó ' + time + ' ' + this.name;
 // 				}
+// 			},
+// 			mounted() {
+// 				fetch("/")
+// 					.then(response => response.json())
+// 					.then((data) => {
+// 						this.questions = data;
+// 					})
 // 			}
 // 		})

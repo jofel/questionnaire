@@ -48,7 +48,7 @@
 			kiértékelhetőek legyenek.<br> Köszönjük együttműködéseteket!
 		</p>
 		<hr class="hr-1" />
-		<div id="vue-app">
+		<div>
 			<h3>II. Felmérés</h3>
 			<p>
 				Jelöld be, hogy mennyire tartod igaznak az állításokat.<br>
@@ -70,13 +70,17 @@
 					<th class="answer">4</th>
 					<th class="answer">5</th>
 				</tr>
-				<tr v-for="q in questions">
-					<td>{{ q.question }}</td>
+				<tr th:each="question : ${questions}">
+					<td th:text="${question.question}">1</td>
 					<td></td>
 					<td></td>
 					<td></td>
 					<td></td>
 					<td></td>
+<!-- 					<td th:text="${question.topic}">Test</td> -->
+<!-- 					<td th:text="${question.title}">1</td> -->
+<!-- 					<td th:text="${question.question}">Test</td> -->
+<!-- 					<td th:text="${question.answer}">Test</td> -->
 				</tr>
 			</table>
 			<hr class="hr-1" />

@@ -1,23 +1,41 @@
 package com.herokuapp.questionnaire.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "question_table")
 public class Question {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
 	private Long id;
-	
+
+	@Column(name = "topic")
 	private String topic;
+
+	@Column(name = "title")
 	private String title;
+
+	@Column(name = "question")
 	private String question;
+
+	@Column(name = "answer")
 	private int answer;
-	
+
 	public Question() {
+	}
+
+	public Question(String topic, String title, String question, int answer) {
+		this.topic = topic;
+		this.title = title;
+		this.question = question;
+		this.answer = answer;
 	}
 
 	public Long getId() {
