@@ -1,33 +1,34 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<title>Herman felmérés</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="icon" href="http://example.com/favicon.png">
-<link rel="stylesheet" href="/bootstrap-3.3.7/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/css/nav.css" />
-<link rel="stylesheet" href="/css/home.css" />
-<script src="https://unpkg.com/vue"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script defer
-	src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
-	integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-	crossorigin="anonymous">
-	
-</script>
+	<title>Herman felmérés</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="http://example.com/favicon.png">
+	<link rel="stylesheet" href="/bootstrap-3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/nav.css" />
+	<link rel="stylesheet" href="/css/home.css" />
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+	 crossorigin="anonymous">
+
+	</script>
 </head>
+
 <body>
 	<div id="mySidenav" class="sidenav no-print">
-		<a href="#home" id="navIcon_home">Kezdőlap <i
-			class="fas fa-home navicon"></i>
-		</a> <a href="#questionnaire" id="navIcon_questionnaire">Kérdőív <i
-			class="fas fa-file navicon"></i>
-		</a> <a href="javascript:window.print()" id="navIcon_print">Nyomtatás
+		<a href="#home" id="navIcon_home">Kezdőlap
+			<i class="fas fa-home navicon"></i>
+		</a>
+		<a href="#questionnaire" id="navIcon_questionnaire">Kérdőív
+			<i class="fas fa-file navicon"></i>
+		</a>
+		<a href="javascript:window.print()" id="navIcon_print">Nyomtatás
 			<i class="fas fa-print navicon"></i>
-		</a> <a
-			href="mailto:fodor.jofel@gmail.com?Subject=HermanHallgatoiFelmeres"
-			id="navIcon_contact">Kapcsolat <i class="fas fa-envelope navicon"></i>
+		</a>
+		<a href="mailto:fodor.jofel@gmail.com?Subject=HermanHallgatoiFelmeres" id="navIcon_contact">Kapcsolat
+			<i class="fas fa-envelope navicon"></i>
 		</a>
 	</div>
 
@@ -36,8 +37,7 @@
 			<img src="/pic/hermanLogo.png" alt="Mountain View">
 		</div>
 		<h1>Leírás</h1>
-		<p>Ezen alkalmazás célja, hogy a Herman Ottó Kollégiumban végzett
-			hallgatói felméréshez a kiosztott adatlapokat elkészítsük.</p>
+		<p>Ezen alkalmazás célja, hogy a Herman Ottó Kollégiumban végzett hallgatói felméréshez a kiosztott adatlapokat elkészítsük.</p>
 		<h4>Készítette:</h4>
 		<p>Fodor József Felicián</p>
 		<p>SZTE Herman Ottó Kollégium Adminisztrációért felelős senior</p>
@@ -49,17 +49,19 @@
 		<hr class="hr-3" />
 		<h3>I. Felmérés célja</h3>
 		<p>
-			Kedves Kollégisták! <br> <br> Reméljük ezen kérdőív
-			segítségével szélesebb és világosabb képet kaphatunk a hallgatói
-			igényekről és fény derül a fejlesztendő területekre! <br>Kérjük,
-			hogy valós véleményeiteket tükrözze ez a felmérés, hogy a válaszok
-			kiértékelhetőek legyenek.<br> Köszönjük együttműködéseteket!
+			Kedves Kollégisták!
+			<br>
+			<br> Reméljük ezen kérdőív segítségével szélesebb és világosabb képet kaphatunk a hallgatói igényekről és fény derül a fejlesztendő
+			területekre!
+			<br>Kérjük, hogy valós véleményeiteket tükrözze ez a felmérés, hogy a válaszok kiértékelhetőek legyenek.
+			<br> Köszönjük együttműködéseteket!
 		</p>
 		<hr class="hr-1" />
 		<div>
 			<h3>II. Felmérés</h3>
 			<p>
-				Jelöld be, hogy mennyire tartod igaznak az állításokat.<br>
+				Jelöld be, hogy mennyire tartod igaznak az állításokat.
+				<br>
 			</p>
 			<ol>
 				<li>- Általában nem igaz</li>
@@ -82,21 +84,33 @@
 				<tr th:each="question : ${questions}">
 					<td class="no-print">
 						<div class="btn-group" role="group">
-							<span class="fas fa-plus-square fa-lg" data-toggle="modal"
-								data-target="#addModal"><button class="btn"></button></span> <span
-								class="fas fa-pen-square fa-lg" data-toggle="modal"
-								data-target="#editModal"><button class="btn"></button></span> <span
-								class="fas fa-minus-square fa-lg" data-toggle="modal"
-								data-target="#deleteModal"><button class="btn"></button></span>
+							<span class="fas fa-plus-square fa-lg" data-toggle="modal" data-target="#addModal">
+								<button class="btn"></button>
+							</span>
+							<span class="fas fa-pen-square fa-lg" data-toggle="modal" data-target="#editModal">
+								<button class="btn"></button>
+							</span>
+							<span class="fas fa-minus-square fa-lg" data-toggle="modal" data-target="#deleteModal">
+								<button class="btn"></button>
+							</span>
 						</div>
-
 					</td>
 					<td th:text="${question.question}">1</td>
-					<td class="answer"><div class="answerDiv"></div></td>
-					<td class="answer"><div class="answerDiv"></td>
-					<td class="answer"><div class="answerDiv"></td>
-					<td class="answer"><div class="answerDiv"></td>
-					<td class="answer"><div class="answerDiv"></td>
+					<td class="answer">
+						<div class="answerDiv"></div>
+					</td>
+					<td class="answer">
+						<div class="answerDiv">
+					</td>
+					<td class="answer">
+						<div class="answerDiv">
+					</td>
+					<td class="answer">
+						<div class="answerDiv">
+					</td>
+					<td class="answer">
+						<div class="answerDiv">
+					</td>
 					<!-- 					<td th:text="${question.topic}">Test</td> -->
 					<!-- 					<td th:text="${question.title}">1</td> -->
 					<!-- 					<td th:text="${question.question}">Test</td> -->
@@ -104,40 +118,104 @@
 				</tr>
 			</table>
 			<hr class="hr-1" />
-		</div>
+			</div>
 
-		<h3>III. Köszönetnyilvánítás</h3>
-		<p>
-			Köszönjük válaszaitokat! <br> A felmérés feldolgozásához
-			kiértékeléséhez szíves türelmetek kérjük. <br> Az eredményeket
-			megosztjuk veletek e-mailben, a honlapon, és a facebook csoportban
-			is.
-		</p>
-	</div>
+			<h3>III. Köszönetnyilvánítás</h3>
+			<p>
+				Köszönjük válaszaitokat!
+				<br> A felmérés feldolgozásához kiértékeléséhez szíves türelmetek kérjük.
+				<br> Az eredményeket megosztjuk veletek e-mailben, a honlapon, és a facebook csoportban is.
+			</p>
+			</div>
 
-	<!-- Modal -->
-	<div class="modal fade" id="deleteModal" role="dialog">
-		<div class="modal-dialog">
+			<!-- Add Question Modal -->
+			<div class="modal fade" id="addModal" role="dialog">
+				<div class="modal-dialog">
 
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Kérdés törlése</h4>
-				</div>
-				<div class="modal-body">
-					<p>Törli a kiválasztott kérdést?.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Törlés</button>
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Új kérdés hozzáadása</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="addQuestionID">ID</label>
+									<input type="text" class="form-control" id="addQuestionID" readonly>
+								</div>
+								<div class="form-group">
+									<label for="addQuestionQuestion">Question</label>
+									<input type="text" class="form-control" id="addQuestionQuestion" placeholder="Kérdés">
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Mégse</button>
+							<button type="submit" class="btn btn-success" data-dismiss="modal">Hozzáadás</button>
+						</div>
+					</div>
+
 				</div>
 			</div>
 
-		</div>
-	</div>
+			<!-- Edit Question Modal -->
+			<div class="modal fade" id="editModal" role="dialog">
+				<div class="modal-dialog">
 
-	<script src="/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-	<script src="/js/app.js"></script>
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Kérdés szerkesztése</h4>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="addQuestionID">ID</label>
+									<input type="text" class="form-control" id="addQuestionID" readonly>
+								</div>
+								<div class="form-group">
+									<label for="addQuestionQuestion">Question</label>
+									<input type="text" class="form-control" id="addQuestionQuestion" placeholder="Kérdés">
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Mégse</button>
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Mentés</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Delete Question Modal -->
+			<div class="modal fade" id="deleteModal" role="dialog">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Kérdés törlése</h4>
+						</div>
+						<div class="modal-body">
+							<p>Törli a kiválasztott kérdést?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Mégse</button>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Törlés</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+			<script src="/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+			<script src="/js/app.js"></script>
 
 </body>
+
 </html>
