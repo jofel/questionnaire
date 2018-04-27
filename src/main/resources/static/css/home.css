@@ -72,26 +72,26 @@ th.answer {
 /* 	background-image: url(/pic/square-2.jpg); */
 /* 	background-repeat: no-repeat; */
 /* /* 	background-attachment: fixed; */
-*
-/
 /*     background-position: center;  */
 /* 	background-size: contain; */
 /* } */
-@media print {
-	.no-print, .no-print * {
-		display: none !important;
-	}
+
+
+
+/* .fa-plus-square {
+	color: green;
+	z-index: -1;
+}
+
+.fa-pen-square {
+	color: rgb(17, 132, 209);
+	z-index: -1;
 }
 
 .fa-minus-square {
 	color: red;
 	z-index: -1;
-}
-
-.fa-plus-square {
-	color: green;
-	z-index: -1;
-}
+} */
 
 .functionColumn {
 	width: 80px;
