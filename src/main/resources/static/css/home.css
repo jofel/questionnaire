@@ -85,14 +85,17 @@ th.answer {
 
 .fa-minus-square {
 	color: red;
+	z-index: -1;
 }
 
 .fa-plus-square {
 	color: green;
+	z-index: -1;
 }
 
 .functionColumn {
 	width: 80px;
+	z-index: -1;
 }
 
 #home {
