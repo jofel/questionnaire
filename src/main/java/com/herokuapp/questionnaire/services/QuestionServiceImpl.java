@@ -31,14 +31,13 @@ public class QuestionServiceImpl implements QuestionService {
 	}
 
 	@Override
-	public void deleteQuestion(int id) {
-		questionRepository.deleteById((long) id);
-
+	public List<Question> getAllQuestion() {
+		return questionRepository.findAll();
 	}
 
 	@Override
-	public List<Question> getAllQuestion() {
-		return questionRepository.findAll();
+	public void deleteQuestionById(long id) {
+		questionRepository.deleteById(id);
 	}
 
 }

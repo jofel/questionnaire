@@ -12,7 +12,7 @@ public interface QuestionService {
 
 	public abstract void updateQuestion(Question question);
 
-	public abstract void deleteQuestion(int id);
+	public abstract void deleteQuestionById(long id);
 
 	public abstract List<Question> getAllQuestion();
 
