@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<link rel="icon" href="http://example.com/favicon.png">
+	<link rel="stylesheet" href="/bootstrap-3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/nav.css" />
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+	 crossorigin="anonymous">
+
+	</script>
+
+</head>
+
+<body>
+
+	<div id="mySidenav" class="sidenav no-print">
+		<a th:href="@{/#}" id="navIcon_home">Kezdőlap
+			<i class="fas fa-home navicon"></i>
+		</a>
+		<a th:href="@{/questions}" id="navIcon_questionnaire">Kérdőív
+			<i class="fas fa-file navicon"></i>
+		</a>
+		<!-- <a href="javascript:window.print()" id="navIcon_print">Nyomtatás -->
+		<a th:href="@{/questionnaire}" id="navIcon_print">Nyomtatás
+			<i class="fas fa-print navicon"></i>
+		</a>
+		<a href="mailto:fodor.jofel@gmail.com?Subject=HermanHallgatoiFelmeres" id="navIcon_contact">Kapcsolat
+			<i class="fas fa-envelope navicon"></i>
+		</a>
+	</div>
+
+</body>
+
+</html>
