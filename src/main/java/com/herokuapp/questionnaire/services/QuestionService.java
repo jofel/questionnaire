@@ -12,9 +12,11 @@ public interface QuestionService {
 
 	public abstract void updateQuestion(Question question);
 
-	public abstract void deleteQuestionById(long id);
+	public abstract void deleteQuestionById(String id);
 
 	public abstract List<Question> getAllQuestion();
+
+	public abstract Object findQuestionById(String id);
 
 	// @Autowired
 	// private QuestionRepository questionRepository;

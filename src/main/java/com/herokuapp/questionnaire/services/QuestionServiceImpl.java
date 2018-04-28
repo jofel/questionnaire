@@ -14,11 +14,6 @@ public class QuestionServiceImpl implements QuestionService {
 	@Autowired
 	private QuestionRepository questionRepository;
 
-	// @Transactional
-	// public Optional<Question> getEmployeeById(int id) {
-	// return questionRepository.findById((long) id);
-	// }
-
 	@Override
 	public void saveQuestion(Question question) {
 		questionRepository.save(question);
@@ -27,7 +22,6 @@ public class QuestionServiceImpl implements QuestionService {
 	@Override
 	public void updateQuestion(Question question) {
 		questionRepository.save(question);
-
 	}
 
 	@Override
@@ -36,8 +30,13 @@ public class QuestionServiceImpl implements QuestionService {
 	}
 
 	@Override
-	public void deleteQuestionById(long id) {
+	public void deleteQuestionById(String id) {
 		questionRepository.deleteById(id);
+	}
+
+	@Override
+	public Object findQuestionById(String id) {
+		return questionRepository.findById(id);
 	}
 
 }
