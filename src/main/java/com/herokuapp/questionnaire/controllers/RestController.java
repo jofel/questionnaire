@@ -48,4 +48,10 @@ public class RestController {
 		return "redirect:/questions";
 	}
 
+	@RequestMapping(path = "/questionnaire", method = RequestMethod.GET)
+	public String getAllQuestionToQuestionnaire(Model model) {
+		model.addAttribute("questions", questionService.getAllQuestion());
+		return "questionnaire";
+	}
+
 }
