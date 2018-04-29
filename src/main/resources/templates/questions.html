@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="UTF-8" />
-<title>Questions</title>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
+<head>
+	<meta charset="UTF-8" />
+	<title>Questions</title>
+	<link rel="stylesheet" href="/css/home.css" />
 </head>
+
 <body>
 	<th:block th:include="layout/navbar"></th:block>
-	<div class="container">
-		<h1>Questions</h1>
+	<div class="container  pull-down">
+		<h1>Kérdések</h1>
 		<div th:if="${not #lists.isEmpty(questions)}">
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th>Id</th>
-						<th>Question</th>
-						<th>Edit</th>
-						<th>Delete</th>
+						<th>Azonosító</th>
+						<th>Kérdés</th>
+						<th>Másolás</th>
+						<th>Törlés</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr th:each="question : ${questions}">
 						<td th:text="${question.id}">1</td>
 						<td th:text="${question.question}">Test</td>
-						<td><a th:href="${'/questions/edit/' + question.id}"
-							class="btn btn-default">Edit</a></td>
-						<td><a th:href="${'/questions/delete/' + question.id}"
-							class="btn btn-danger">Delete</a></td>
+						<td>
+							<a th:href="${'/questions/edit/' + question.id}" class="btn btn-default">Másolás</a>
+						</td>
+						<td>
+							<a th:href="${'/questions/delete/' + question.id}" class="btn btn-danger" onclick="return confirm('Biztos törlöd a kiválasztott elemet?')">Törlés</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
 </body>
+
 </html>
