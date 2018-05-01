@@ -2,14 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head lang="en">
-	<title>Edit Product Details</title>
+	<title>Kérdés szerkesztése</title>
 	<th:block th:include="layout/navbar"></th:block>
 	<link rel="stylesheet" href="/css/home.css" />
 </head>
 
 <body>
 	<div class="container pull-down">
-		<h2>Edit Product Details</h2>
+		<h2>Kérdés szerkesztése</h2>
 		<div>
 			<form class="form-horizontal" th:object="${question}" th:action="@{/questions}" method="post">
 				<div class="form-group">
